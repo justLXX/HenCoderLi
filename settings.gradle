@@ -1,3 +1,4 @@
+include ':customview'
 include ':app'
 rootProject.name = "HenCoderLi"
 include ':lesson', ':app', ':base'

@@ -18,7 +18,7 @@ import java.util.*
 
 class CodeView @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null) :
     AppCompatTextView(
-        context!!, attrs
+        context, attrs
     ) {
     private val paint = Paint()
     private val codeList = arrayOf(

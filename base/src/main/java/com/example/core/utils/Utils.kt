@@ -3,6 +3,7 @@ package com.example.core.utils
 import android.content.Context
 import android.content.res.Resources
 import android.graphics.Color
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.widget.Toast
@@ -27,7 +28,17 @@ object Utils {
     fun Context.getColor(@ColorRes id: Int): Int {
         return ContextCompat.getColor(this, id)
     }
-    fun View.getColor(@ColorRes id: Int): Int{
+
+    fun View.getColor(@ColorRes id: Int): Int {
         return this.context.getColor(id)
+    }
+
+
+    fun Any.log(msg: String) {
+        Log.d(this.javaClass.simpleName, msg)
+    }
+
+    fun Any.logE(msg: String) {
+        Log.e(this.javaClass.simpleName, msg)
     }
 }
