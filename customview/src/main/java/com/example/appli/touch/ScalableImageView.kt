@@ -90,10 +90,7 @@ class ScalableImageView @JvmOverloads constructor(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        if (big) {
-            canvas.translate(offsetX, offsetY)
-        }
-        canvas.translate(width / 2f, 0f)
+        canvas.translate(scaleFraction * offsetX, scaleFraction * offsetY)
         println("smallScale = $smallScale  bigScale = $bigScale")
         val scale = (bigScale - smallScale) * scaleFraction + smallScale
         canvas.scale(scale, scale, width / 2f, height / 2f)

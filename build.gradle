@@ -9,7 +9,7 @@ buildscript {
 
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.android.tools.build:gradle:4.1.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -75,7 +75,7 @@ ext {
             converter_gson           : "com.squareup.retrofit2:converter-gson:${version_retrofit}",
             converter_scalars        : "com.squareup.retrofit2:converter-scalars:${version_retrofit}",
 
-            base                     : project(':base')
+            module_base                     : project(':base')
 
     ]
 

@@ -49,3 +49,4 @@ class LessonActivity : AppCompatActivity(), BaseView<LessonPresenter>,
         return false
     }
 }
+

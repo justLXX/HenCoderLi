@@ -1,4 +1,7 @@
 include ':customview'
+include ':hashmapapplication'
+include ':coroutine'
+include ':customVIew'
 include ':app'
 rootProject.name = "HenCoderLi"
 include ':lesson', ':app', ':base'

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--天梯练习进度条-->
+    <declare-styleable name="LadderProgress">
+        <!--初始进度条颜色-->
+        <attr name="mProgressBgColor" format="color" />
+        <!--初始文字颜色-->
+        <attr name="mTextColor" format="color" />
+        <attr name="mTextSize" format="dimension" />
+        <attr name="maxProgress" format="integer" />
+        <attr name="currentProgress" format="integer" />
+        <attr name="fontPath" format="string" />
+    </declare-styleable>
+
+
+
+</resources>

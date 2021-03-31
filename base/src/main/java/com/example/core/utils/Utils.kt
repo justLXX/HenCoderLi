@@ -42,3 +42,8 @@ object Utils {
         Log.e(this.javaClass.simpleName, msg)
     }
 }
+
+
+fun main() {
+
+}

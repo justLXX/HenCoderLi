@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity
         et_username = findViewById(R.id.et_username);
         et_password = findViewById(R.id.et_password);
         et_code = findViewById(R.id.et_code);
+        getWindow();
 
         et_username.setText(CacheUtils.get(usernameKey));
         et_password.setText(CacheUtils.get(passwordKey));
