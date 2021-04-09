@@ -1,7 +1,15 @@
 include ':customview'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../flutter_module/.android/include_flutter.groovy'
+))
 include ':hashmapapplication'
 include ':coroutine'
 include ':customVIew'
 include ':app'
 rootProject.name = "HenCoderLi"
 include ':lesson', ':app', ':base'
+
+include ':flutter_module'
+project(':flutter_module').projectDir = new File('../flutter_module')
