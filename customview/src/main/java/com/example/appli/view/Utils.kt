@@ -1,4 +1,4 @@
-package com.example.appli.view
+package com.view
 
 import android.content.res.Resources
 import android.graphics.Bitmap
@@ -20,15 +20,3 @@ val Int.dp: Float
     get() = this.toFloat().dp
 
 
-fun getAvatar(resources: Resources,wid: Float): Bitmap {
-    val options = BitmapFactory.Options()
-    options.inJustDecodeBounds = true
-    BitmapFactory.decodeResource(resources, R.drawable.avtar, options)
-    val min = min(options.outWidth, options.outHeight)
-    options.inJustDecodeBounds = false
-    options.inDensity = options.outWidth
-    options.inTargetDensity = wid.toInt()
-    println("resWid = ${options.outWidth}  resHeight = ${options.outHeight}")
-    println("inDensity = ${options.inDensity}inTargetDensity = ${options.inTargetDensity}")
-    return BitmapFactory.decodeResource(resources, R.drawable.avtar,options)
-}

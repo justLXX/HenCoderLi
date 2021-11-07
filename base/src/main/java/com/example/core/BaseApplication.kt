@@ -1,3 +1,4 @@
+
 package com.example.core
 
 import android.app.Application
@@ -15,5 +16,16 @@ class BaseApplication : Application() {
         lateinit var currentApplication: Context
             private set
 
+
+        fun getCompanionName() = "companionName"
+
     }
+}
+
+const val name = "BaseApplication"
+
+val age = 1
+
+fun getMine(){
+
 }

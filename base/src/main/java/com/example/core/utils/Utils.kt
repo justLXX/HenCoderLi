@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.annotation.ColorRes
 import androidx.core.content.ContextCompat
 import com.example.core.BaseApplication.Companion.currentApplication
+import com.example.core.utils.Utils.getColor
 
 object Utils {
     private val displayMetrics = Resources.getSystem().displayMetrics
@@ -30,7 +31,7 @@ object Utils {
     }
 
     fun View.getColor(@ColorRes id: Int): Int {
-        return this.context.getColor(id)
+        return ContextCompat.getColor(this.context,id)
     }
 
 

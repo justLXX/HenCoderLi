@@ -18,7 +18,7 @@ import java.util.jar.Attributes
  * @Date: 2/23/21 10:17 PM
  * @Description:
  */
-private val RADIUS = 150.dp
+val RADIUS = 150.dp
 private val RING_WIDTH = 20.dp
 private val CIRCLE_COLOR = "#90a4a3".toColorInt()
 private val HEIGHT_LIGHT_COLOR = "#ff4081".toColorInt()

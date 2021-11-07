@@ -20,8 +20,8 @@ class LiList<T> {
         ArrayList<? extends Fruit> fruits = apples;
         Apple apple = new Apple();
         Banana banana = new Banana();
-        fruits.add(apple);
-        fruits.add();
+//        fruits.add(apple);
+//        fruits.add();
 
     }
 }

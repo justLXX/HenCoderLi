@@ -1,8 +1,11 @@
 package com.example.lesson
 
+import android.os.Build
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 import com.example.core.BaseViewHolder
 import com.example.lesson.LessonAdapter.LessonViewHolder
@@ -20,10 +23,14 @@ class LessonAdapter : RecyclerView.Adapter<LessonViewHolder>() {
         return list.size
     }
 
+    var i = 0
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LessonViewHolder {
+        Log.e("====>>>","onCreateViewHolder  ${i++}")
         return LessonViewHolder.onCreate(parent)
     }
 
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onBindViewHolder(holder: LessonViewHolder, position: Int) {
         holder.onBind(list[position])
     }
@@ -32,6 +39,7 @@ class LessonAdapter : RecyclerView.Adapter<LessonViewHolder>() {
      * 静态内部类
      */
     class LessonViewHolder internal constructor(itemView: View) : BaseViewHolder(itemView) {
+        @RequiresApi(Build.VERSION_CODES.M)
         fun onBind(lesson: Lesson) {
             var date = lesson.date
             if (date == null) {
